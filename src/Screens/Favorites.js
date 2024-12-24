@@ -1,12 +1,10 @@
 import { Text, SafeAreaView } from "react-native";
-import React, { Component } from "react";
+import React from "react";
 
-export default class Favorites extends Component {
-  render() {
-    return (
-      <SafeAreaView>
-        <Text>Favorites</Text>
-      </SafeAreaView>
-    );
-  }
+export default function Favorites() {
+  return (
+    <SafeAreaView>
+      <Text>Favorites</Text>
+    </SafeAreaView>
+  );
 }

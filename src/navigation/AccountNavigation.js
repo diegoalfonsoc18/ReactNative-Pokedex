@@ -11,6 +11,7 @@ export default function AccountNavigation() {
         component={AccountScreen}
         options={{
           title: "Mi Cuenta",
+          headerShown: false,
         }}
       />
     </Stack.Navigator>
