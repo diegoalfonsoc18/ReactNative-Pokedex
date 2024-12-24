@@ -7,11 +7,9 @@ export default function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    (async () => {
       await loadPokemons();
-    };
-
-    fetchData();
+    })();
   }, []);
 
   const loadPokemons = async () => {
@@ -27,8 +25,7 @@ export default function Pokedex() {
           name: pokemonDetails.name,
           type: pokemonDetails.types[0].type.name,
           order: pokemonDetails.order,
-          imagen:
-            pokemonDetails.sprites.other["official-artwork"].front_default,
+          image: pokemonDetails.sprites.other["official-artwork"].front_default,
         });
       }
 

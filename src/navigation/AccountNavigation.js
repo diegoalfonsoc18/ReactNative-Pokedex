@@ -1,18 +1,16 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 import AccountScreen from "../Screens/Account";
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
+
 export default function AccountNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="Account"
         component={AccountScreen}
-        options={{
-          title: "Mi Cuenta",
-          headerShown: false,
-        }}
+        options={{ title: "Mi cuenta" }}
       />
     </Stack.Navigator>
   );

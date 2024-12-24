@@ -1,8 +1,8 @@
 import React from "react";
-import Icon from "react-native-vector-icons/FontAwesome5";
 import { Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import FavoriteNavigation from "../Screens/Favorites";
+import Icon from "react-native-vector-icons/FontAwesome5";
+import FavoriteNavigation from "./FavoriteNavigation";
 import PokedexNavigation from "./PokedexNavigation";
 import AccountNavigation from "./AccountNavigation";
 
@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="FAVORITOS"
+        name="Favorite"
         component={FavoriteNavigation}
         options={{
           tabBarLabel: "Favoritos",
@@ -21,6 +21,7 @@ export default function Navigation() {
           ),
         }}
       />
+
       <Tab.Screen
         name="Pokedex"
         component={PokedexNavigation}
@@ -29,11 +30,12 @@ export default function Navigation() {
           tabBarIcon: () => renderPokeball(),
         }}
       />
+
       <Tab.Screen
         name="Account"
         component={AccountNavigation}
         options={{
-          tabBarLabel: "Mi Cuenta",
+          tabBarLabel: "Mi cuenta",
           tabBarIcon: ({ color, size }) => (
             <Icon name="user" color={color} size={size} />
           ),
@@ -47,7 +49,7 @@ function renderPokeball() {
   return (
     <Image
       source={require("../assets/icon-pokebola.png")}
-      style={{ width: 75, height: 75, top: -18 }}
+      style={{ width: 75, height: 75, top: -15 }}
     />
   );
 }
