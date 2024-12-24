@@ -17,14 +17,12 @@ export default function PokemonCard(props) {
 
   return (
     <TouchableWithoutFeedback onPress={goToPokemon}>
-      <View style={styles.card}>
-        <View style={styles.spacing}>
-          <View style={styles.bgStyles}>
-            <Text style={styles.number}>
-              #{`${pokemon.order}`.padStart(3, 0)}
-            </Text>
+      <View style={[styles.card]}>
+        <View style={[styles.spacing]}>
+          <View style={[styles.bgStyles]}>
+            <Text># {`${pokemon.order}`.padStart(3, 0)}</Text>
             <Text style={styles.name}>{pokemon.name}</Text>
-            <Image source={{ uri: pokemon.image }} style={styles.image} />
+            <Image source={{ uri: pokemon.image }} style={[styles.image]} />
           </View>
         </View>
       </View>
