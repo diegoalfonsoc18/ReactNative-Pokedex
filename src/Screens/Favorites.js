@@ -5,7 +5,7 @@ export default class Favorites extends Component {
   render() {
     return (
       <SafeAreaView>
-        <Text>Favorites</Text>
+        <Text>Favoritos</Text>
       </SafeAreaView>
     );
   }
