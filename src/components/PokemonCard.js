@@ -8,6 +8,10 @@ import {
 } from "react-native";
 import getColorByPokemonType from "../utils/getColorByPokemonType";
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 export default function PokemonCard(props) {
   const { pokemon } = props;
   const pokemonColor = getColorByPokemonType(pokemon.type);
@@ -29,7 +33,9 @@ export default function PokemonCard(props) {
             <Text style={styles.number}>
               # {`${pokemon.order}`.padStart(3, 0)}
             </Text>
-            <Text style={styles.name}>{pokemon.name}</Text>
+            <Text style={styles.name}>
+              {capitalizeFirstLetter(pokemon.name)}
+            </Text>
             <Image source={{ uri: pokemon.image }} style={styles.image} />
           </View>
         </View>
