@@ -12,7 +12,6 @@ export default function Pokedex() {
       await loadPokemons();
     })();
   }, []);
-  r;
 
   const loadPokemons = async () => {
     try {
