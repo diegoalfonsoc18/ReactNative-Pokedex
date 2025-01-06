@@ -23,11 +23,12 @@ export default function Navigation() {
       />
 
       <Tab.Screen
-        name="Pokedex"
+        name="Pokedexxxx"
         component={PokedexNavigation}
         options={{
           tabBarLabel: "",
           tabBarIcon: () => renderPokeball(),
+          headerShown: false,
         }}
       />
 
